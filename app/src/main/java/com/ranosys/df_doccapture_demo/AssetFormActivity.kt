@@ -29,7 +29,7 @@ class AssetFormActivity : AppCompatActivity() {
                 getEditTextValueForKey("middle_name"),
                 getEditTextValueForKey("last_name"),
                 getEditTextValueForKey("nationality"),
-                getEditTextValueForKey("gender"),
+                "Male",
                 getEditTextValueForKey("birth_date"),
                 getEditTextValueForKey("licence_number"),
                 getEditTextValueForKey("issue_date"),
@@ -44,7 +44,7 @@ class AssetFormActivity : AppCompatActivity() {
                 false,
                 40.0,
                 50.0,
-                "Asia"
+                "Africa/Ceuta"
             )
 
             DataFornixSdk.uploadIdentityAsset(

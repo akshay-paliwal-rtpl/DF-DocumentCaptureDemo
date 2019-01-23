@@ -23,16 +23,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun callAPI() {
-        /*  val requestModel = CreateUserRequestModel(et_email.text.toString(), et_name.text.toString(),
-              et_phone_no.text.toString().toLong(),
-              et_country_code.text.toString() )*/
-
         val requestModel = CreateUserRequestModel(
-            "mustafa.bohra@ranosys.com",
-            "Mustafa",
-            8829889052,
-            "91"
+            et_email.text.toString(), et_name.text.toString(),
+              et_phone_no.text.toString().toLong(),
+            et_country_code.text.toString()
         )
+
+        /*val requestModel = CreateUserRequestModel(
+            "vikash.bijarniya@ranosys.com",
+            "Vikash",
+            9269795777,
+            "91"
+        )*/
         DataFornixSdk.createUser(this@MainActivity, requestModel, object : ApiCallback<CreateUserResponse> {
             override fun onError(message: String) {
                 Toast.makeText(this@MainActivity, message.toString(), Toast.LENGTH_SHORT).show()
