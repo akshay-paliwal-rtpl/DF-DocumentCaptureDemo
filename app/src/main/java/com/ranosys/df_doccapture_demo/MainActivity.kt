@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        DataFornixSdk.initializeSdk("ranosys:GQrFmqL9Vkx1J7qFD9nyVgZ9EfG7OzEq")
+        DataFornixSdk.initializeSdk("ranosys:gIC7fNkEGjRJ7oA0dFefEhCU6150lSB4")
         btn_create_user.setOnClickListener {
             callAPI()
         }

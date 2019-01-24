@@ -95,8 +95,7 @@ class UploadAssetActivity : AppCompatActivity() {
 
     private fun callDocCaptureSDk() {
         documentCaptureInstance.captureDocument(
-            "4oy4WF9stKpW3B5ZXk9Z1z5RC5Rn9JLV",
-            "ranosys",
+            "ranosys:po5KAZjv7zFIU8NFHn9LRTIvEn0ciSq6",
             config,
             object : DocumentCaptureInstance.DocumentCaptureListener {
                 override fun onDocumentCaptureSuccess(path: List<String>) {
