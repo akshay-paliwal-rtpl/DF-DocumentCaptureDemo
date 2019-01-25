@@ -95,7 +95,7 @@ class UploadAssetActivity : AppCompatActivity() {
 
     private fun callDocCaptureSDk() {
         documentCaptureInstance.captureDocument(
-            "ranosys:po5KAZjv7zFIU8NFHn9LRTIvEn0ciSq6",
+            GlobleDataSingleton.currentSdkToken,
             config,
             object : DocumentCaptureInstance.DocumentCaptureListener {
                 override fun onDocumentCaptureSuccess(path: List<String>) {
