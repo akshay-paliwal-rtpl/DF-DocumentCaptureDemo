@@ -17,14 +17,15 @@ Sole purpose of this SDK is to capture the snapshot of document via scan mode, e
 implementation 'documentscanner:documentscanner:1.0.0'
 ```
 - In your project level build.gradle add this dependency:
-```sh allprojects {
+```sh 
+allprojects {
    repositories {
       jcenter()
        maven {
             url "https://dl.bintray.com/vikashkumar/documentscanner" 
        }
-   }
-} 
+    }
+ } 
 ```
 - Now in your project activity create DocumentCaptureInstance object: 
 ```sh
@@ -34,6 +35,10 @@ private lateinit var documentCaptureInstance: DocumentCaptureInstance
 ```sh
 documentCaptureInstance = DocumentCaptureInstance(this, "ranosys:po5KAZjv7zFIU8NFHn9LRTIvEn0ciSq6")
 ```
+
+[![N|Solid](.png)](https://nodesource.com/products/nsolid)
+
+
 ### You can customize the color and theme of the SDK's view according to your projects user-experience.
 ### Just access the properties mentioned in the SDK. Have a look at the sample below:
 
