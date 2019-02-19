@@ -1,18 +1,17 @@
-# DF-DocumentCaptureDemo
 # Document Scanner SDK
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-# This SDK based on OpenCV which is been created to scan, capture and crop the document.
+## This SDK based on OpenCV which is been created to scan, capture and crop the document.
 
 - Capture Document from Front and Back
 - Crop with Auto-Edge-Detection
 
 Sole purpose of this SDK is to capture the snapshot of document via scan mode, even you get the functionality of auto-edge-detection, so that you can crop the images more accurately.
 
-# You can achieve the functionality with easy integration of following steps:
+## You can achieve the functionality with easy integration of following steps:
 - In your app level build.gradle add this dependency:
 ```sh
 implementation 'documentscanner:documentscanner:1.0.0'
@@ -35,8 +34,8 @@ private lateinit var documentCaptureInstance: DocumentCaptureInstance
 ```sh
 documentCaptureInstance = DocumentCaptureInstance(this, "ranosys:po5KAZjv7zFIU8NFHn9LRTIvEn0ciSq6")
 ```
-# You can customize the color and theme of the SDK's view according to your projects user-experience.
-# Just access the properties mentioned in the SDK. Have a look at the sample below:
+### You can customize the color and theme of the SDK's view according to your projects user-experience.
+### Just access the properties mentioned in the SDK. Have a look at the sample below:
 
 ```sh
 val config = DocumentCaptureConfig()
