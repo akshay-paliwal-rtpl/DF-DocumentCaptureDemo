@@ -35,6 +35,22 @@ private lateinit var documentCaptureInstance: DocumentCaptureInstance
 ```sh
 documentCaptureInstance = DocumentCaptureInstance(this, "ranosys:po5KAZjv7zFIU8NFHn9LRTIvEn0ciSq6")
 ```
+<br>
+<br>
+<p align="left">
+<img src="Screenshot_20190220-110035.png" width="200"/>
+<img src="Screenshot_20190220-110122.png" width="200"/>
+<img src="Screenshot_20190220-110454.png" width="200"/>
+<img src="Screenshot_20190220-110512.png" width="200"/> <br>
+  
+Repeat the same procedure to capture the back of document as well.
+  
+<p align="left">
+<img src="Screenshot_20190220-110604.png" width="200"/>
+<img src="Screenshot_20190220-110623.png" width="200"/>
+<img src="Screenshot_20190220-110818.png" width="200"/>
+<img src="Screenshot_20190220-110908.png" width="200"/>
+
 
 ### You can customize the color and theme of the SDK's view according to your projects user-experience.
 ### Just access the properties mentioned in the SDK. Have a look at the sample below:
