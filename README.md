@@ -1,7 +1,7 @@
 # Document Scanner SDK
- [ ![Download](https://api.bintray.com/packages/vikashkumar/documentscanner/documentscanner/images/download.svg) ]
+![Download](https://api.bintray.com/packages/vikashkumar/documentscanner/documentscanner/images/download.svg)
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)
 
 ## This SDK based on OpenCV which is been created to scan, capture and crop the document.
 
