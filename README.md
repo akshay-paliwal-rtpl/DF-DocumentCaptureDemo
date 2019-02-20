@@ -1,5 +1,5 @@
 # Document Scanner SDK
- [ ![Download](https://api.bintray.com/packages/vikashkumar/documentscanner/documentscanner/images/download.svg) ](https://bintray.com/vikashkumar/documentscanner/documentscanner/_latestVersion)
+ [ ![Download](https://api.bintray.com/packages/vikashkumar/documentscanner/documentscanner/images/download.svg) ]
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
