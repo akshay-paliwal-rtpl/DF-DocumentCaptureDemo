@@ -74,7 +74,5 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
 #### By calling `checkVideoLiveliness()` method you will be redirected to the selfie authentication flow which is shown in below sequence of images:
 <br>
 <p align="left">
-<img src="Screenshot_20190220-110035.png" width="200"/>
-<img src="Screenshot_20190220-110122.png" width="200"/>
-<img src="Screenshot_20190220-110454.png" width="200"/>
-<img src="Screenshot_20190220-110512.png" width="200"/> <br>
+<img src="DF-VL-Screen01.png" width="200"/>
+<img src="DF-VL-Screen02.png" width="200"/>
