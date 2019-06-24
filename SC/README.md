@@ -1,15 +1,10 @@
 
-## Document Scanner SDK
+## SelfieAuth (df-selfie-check) SDK
 ![Download](https://api.bintray.com/packages/datafornix/documentscanner/documentscanner/images/download.svg)
 
 ![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)
 
-### This SDK based on OpenCV which is been created to scan, capture and crop the document.
-
-- Capture Document from Front and Back
-- Crop with Auto-Edge-Detection
-
-Sole purpose of this SDK is to capture the snapshot of document via scan mode, even you get the functionality of auto-edge-detection, so that you can crop the images more accurately.
+This SDK is created to automatically capture the user's selfie using the facial expression (eye-blink). It will ensure that user have to be physically present while taking the selfie.
 
 #### You can achieve the functionality with easy integration of following steps:
 - In your project level `build.gradle` add this dependency:
@@ -17,79 +12,67 @@ Sole purpose of this SDK is to capture the snapshot of document via scan mode, e
 allprojects {
    repositories {
       jcenter()
-       maven {
-            url "https://dl.bintray.com/datafornix/documentscanner" 
-       }
+       maven { url "https://dl.bintray.com/datafornix/selfiecheck" }
     }
  } 
 ```
 - In your app level `build.gradle` add this dependency:
 ```sh
-implementation 'documentscanner:documentscanner:1.0.0'
+implementation 'selfiecheck:selfiecheck:1.0.0'
 ```
-- Now in your project's activity create DocumentCaptureInstance object: 
+- Now in your project's activity create `SelfieCheckInstance` object: 
 ```sh
-private lateinit var documentCaptureInstance: DocumentCaptureInstance
+private lateinit var selfieCheckInstance: SelfieCheckInstance
 ```
 - Initialise this object with your `sdkToken`
 ```sh
-documentCaptureInstance = DocumentCaptureInstance(this, "YOUR_SDK_TOKEN")
+selfieCheckInstance = SelfieCheckInstance(this, YOUR_SDK_TOKEN)
 ```
 
 #### You can customise the colour and theme of the SDK's view according to your project's user-experience.
 #### Just access the properties mentioned in the SDK. Have a look at the sample below:
 
 ```sh
-val config = DocumentCaptureConfig()
-config.isDocumentBackCaptureRequired = true
-config.cameraScreenBackgroundColor =
-       ContextCompat.getColor(this, R.color.black)
-config.tutorialScreenBackgroundColor =
-       ContextCompat.getColor(this, R.color.colorPrimaryDark)
-config.cropScreenBackgroundColor =
-       ContextCompat.getColor(this, R.color.black)
+val selfieCheckConfig = SelfieCheckConfig()
+selfieCheckConfig.tutorialScreenBackgroundColor = Color.GRAY
+selfieCheckConfig.permissionScreenContinueButtonText = "Continue"
+selfieCheckConfig.cameraScreenBackgroundColor = ContextCompat.getColor(this, R.color.black)
 ```
 
-- Call `captureDocument` function from `documentCaptureInstance`
+- Call `selfieCheck()` function from `selfieCheckInstance`
 ```sh
-documentCaptureInstance.captureDocument(
-       config,
-       object : DocumentCaptureInstance.DocumentCaptureListener {
-           override fun onDocumentCaptureSuccess(path: List<String>) {
-               // get back and front image path from path:List<String>
-           }
-           override fun onDocumentCaptureFailure(error: DocumentCaptureInstance.DocumentCaptureError) {
-               // document uploading failed, please check error
-           }
-       })
+selfieCheckInstance.selfieCheck(
+selfieCheckConfig,
+object : SelfieCheckInstance.SelfieCheckListener {
+    override fun onSelfieCheckFailure(error: SelfieCheckInstance.SelfieCheckError) {
+	    // selfie check is failed duew to some reason
+        showMessage(error.message)
+    }
+
+    override fun onSelfieCheckSuccess(path: String) {
+		// selfie check is passed and you get path of selfie
+        callSelfieUploadApi(path)
+    }
+})
 ```
 
 - Override `onActivityResult`:
 ```sh
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
    super.onActivityResult(requestCode, resultCode, data)
-   if (resultCode == Activity.RESULT_OK && requestCode == DfDCConstants.REQUEST_CODE_DOCUMENT_CAPTURE_INSTANCE) {
-       if (::documentCaptureInstance.isInitialized) {
-           documentCaptureInstance.onDocumentCaptureResult(requestCode, resultCode, data)
-       }
-   }
+	 if (resultCode == Activity.RESULT_OK && requestCode == DfSCConstants.REQUEST_CODE_SELFIE_CHECK_INSTANCE) {
+          if (::selfieCheckInstance.isInitialized) {
+              selfieCheckInstance.onSelfieCheckResult(requestCode, resultCode, data)
+          }
+      }
 }
 ```
 
 
-#### By calling `captureDocument()` method you will be redirected to the document capture flow which is shown in below sequence of images:
+#### By calling `selfieCheck()` method you will be redirected to the selfie authentication flow which is shown in below sequence of images:
 <br>
 <p align="left">
-
 <img src="Screenshot_20190220-110035.png" width="200"/>
 <img src="Screenshot_20190220-110122.png" width="200"/>
 <img src="Screenshot_20190220-110454.png" width="200"/>
 <img src="Screenshot_20190220-110512.png" width="200"/> <br>
-  
-#### Repeat the same procedure to capture the back of document as well.
-  
-<p align="left">
-<img src="Screenshot_20190220-110604.png" width="200"/>
-<img src="Screenshot_20190220-110623.png" width="200"/>
-<img src="Screenshot_20190220-110818.png" width="200"/>
-<img src="Screenshot_20190220-110908.png" width="200"/>
