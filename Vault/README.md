@@ -58,3 +58,12 @@ startActivity(Intent(this, VaultActivity::class.java))
 |showSharedAssetsWithUser|displays a list of all shared assets of a particular user in a new Activity|
 |showAssetsSharedByUser|displays a list of all shared assets by a particular user in a new Activity|
 |showAssetRequestListFromOrganizations|displays a list of all requests by any organisation in a new Activity|
+
+
+#### By calling `startActivity()` method you will be redirected to the vault sdk flow which is shown in below sequence of images:
+<br>
+<p align="left">
+<img src="DF-Vault-Screen01.png" width="200"/>
+<img src="DF-Vault-Screen02.png" width="200"/>
+<img src="DF-Vault-Screen03.png" width="200"/>
+<img src="DF-Vault-Screen04.png" width="200"/> <br>
