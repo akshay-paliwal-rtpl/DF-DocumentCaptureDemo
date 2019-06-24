@@ -28,19 +28,19 @@ DataFornixSdk.initializeSdk(YOUR_API_TOKEN)
 - Call `all_api_calling` function from `DataFornixSdk` as example:
 ```sh
 DataFornixSdk.sendImageForSelfieCheck(this,
-            loggedInUserId, imagePath, object : ApiCallback<UploadAssetBasicResponse> {
-                override fun onError(message: String) {
-                    showMessage(message)
-                }
+    loggedInUserId, imagePath, object : ApiCallback<UploadAssetBasicResponse> {
+        override fun onError(message: String) {
+            showMessage(message)
+        }
 
-                override fun onException(throwable: Throwable) {
-                    showMessage(throwable.localizedMessage)
-                }
+        override fun onException(throwable: Throwable) {
+            showMessage(throwable.localizedMessage)
+        }
 
-                override fun onSuccess(result: UploadAssetBasicResponse) {
-                    showMessage(result.message)
-                }
-            })
+        override fun onSuccess(result: UploadAssetBasicResponse) {
+            showMessage(result.message)
+        }
+    })
 ```
 
 #### By calling different different methods of`DataFornixSdk` class you will be calling all API's of this SDK and can get callbacks of the API response.
