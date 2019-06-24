@@ -72,7 +72,7 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
 #### By calling `selfieCheck()` method you will be redirected to the selfie authentication flow which is shown in below sequence of images:
 <br>
 <p align="left">
-<img src="Screenshot_20190220-110035.png" width="200"/>
-<img src="Screenshot_20190220-110122.png" width="200"/>
-<img src="Screenshot_20190220-110454.png" width="200"/>
-<img src="Screenshot_20190220-110512.png" width="200"/> <br>
+<img src="DF-SC-Screen-01.png" width="200"/>
+<img src="DF-SC-Screen-02.png" width="200"/>
+<img src="DF-SC-Screen-03.png" width="200"/>
+<img src="DF-SC-Screen-04.png" width="200"/> <br>
