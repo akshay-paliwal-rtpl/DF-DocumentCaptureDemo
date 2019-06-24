@@ -1,6 +1,6 @@
 
 ## SelfieAuth (df-selfie-check) SDK
-![Download](https://api.bintray.com/packages/datafornix/documentscanner/documentscanner/images/download.svg)
+![Download](https://api.bintray.com/packages/datafornix/selfiecheck/selfiecheck/images/download.svg)
 
 ![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)
 

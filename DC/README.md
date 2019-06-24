@@ -50,7 +50,7 @@ config.cropScreenBackgroundColor =
        ContextCompat.getColor(this, R.color.black)
 ```
 
-- Call `captureDocument` function from `documentCaptureInstance`
+- Call `captureDocument()` function from `documentCaptureInstance`
 ```sh
 documentCaptureInstance.captureDocument(
        config,
