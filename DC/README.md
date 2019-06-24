@@ -81,15 +81,15 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
 <br>
 <p align="left">
 
-<img src="Screenshot_20190220-110035.png" width="200"/>
-<img src="Screenshot_20190220-110122.png" width="200"/>
-<img src="Screenshot_20190220-110454.png" width="200"/>
-<img src="Screenshot_20190220-110512.png" width="200"/> <br>
+<img src="DF-DC-Sceen01.png" width="200"/>
+<img src="DF-DC-Sceen02.png" width="200"/>
+<img src="DF-DC-Sceen03.png" width="200"/>
+<img src="DF-DC-Sceen04.png" width="200"/> <br>
   
 #### Repeat the same procedure to capture the back of document as well.
   
 <p align="left">
-<img src="Screenshot_20190220-110604.png" width="200"/>
-<img src="Screenshot_20190220-110623.png" width="200"/>
-<img src="Screenshot_20190220-110818.png" width="200"/>
-<img src="Screenshot_20190220-110908.png" width="200"/>
+<img src="DF-DC-Sceen05.png" width="200"/>
+<img src="DF-DC-Sceen06.png" width="200"/>
+<img src="DF-DC-Sceen07.png" width="200"/>
+<img src="DF-DC-Sceen08.png" width="200"/>
